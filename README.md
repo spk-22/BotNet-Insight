@@ -73,7 +73,8 @@ The main script performs the following actions:
     * Construct the graph.
     * Train the GraphSAGE model.
     * Evaluate its performance with various metrics and visualizations.
-    * Save the best model to `/content/drive/My Drive/IOT/iot_model.pth`.
+ 3. **Visual Interface**: The dashboard helps to visualize the data fed to the global (fusion classifier) and attack - specific models for viewing class probabilities, graph plot visualization and accuracy metrics, confidence scores of both models and the probable reason behind the respective model's classification.
+
 
 ## Results
 
@@ -88,6 +89,46 @@ The script will output:
 * Plots of training loss and test accuracy over epochs.
 * A confusion matrix visualizing classification performance.
 * An ROC curve with AUC score.
+
+## 📈 Evaluation
+
+The model achieved strong performance on phishing detection:
+
+| Metric     | Value  |
+|------------|--------|
+| Accuracy   | 96.12% |
+| Precision  | 96.11% |
+| Recall     | 96.12% |
+| F1-Score   | 96.11% |
+| AUC-ROC    | 0.9935 | Visualized in final plot |
+
+# Dependencies
+The project relies on the following key libraries:
+
+Python 3.x
+torch (PyTorch)
+torch-geometric (PyG)
+torch-scatter
+pandas
+numpy
+scikit-learn
+matplotlib
+gradio
+
+```bash
+git clone https://github.com/spk-22/BotNet-Insight
+```
+```bash
+pip install -r requirements.txt
+# (Or manually install: torch, torch-geometric, scikit-learn, pandas, numpy, matplotlib)
+# Ensure torch-geometric, torch-scatter, and torch-sparse versions are compatible with your PyTorch version.
+```
+```bash 
+python iot_final.py
+```
+```bash
+streamlit run web_app.py
+```
 
 ## Future Improvements
 
