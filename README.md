@@ -1,4 +1,4 @@
----
+
 # IoT Botnet Detection with GraphSAGE
 
 This repository contains code for detecting IoT botnet attacks (specifically Mirai) using a **GraphSAGE** model. The approach involves representing IoT device data as a graph and leveraging the power of Graph Neural Networks (GNNs) for classification.
